@@ -2835,6 +2835,18 @@ p, li { white-space: pre-wrap; }
             <suffix></suffix>
             <vTx>1</vTx>
         </si_motor_poles>
+        <si_use_mech_limits>
+            <longName>Use Mechanical Limits</longName>
+            <type>5</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+                &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+                p, li { white-space: pre-wrap; }
+                &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'DejaVu Sans'; ; font-weight:400; font-style:normal;&quot;&gt;
+                &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if true activates mechanical limits, beyond which motor turns off&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>MCCONF_SI_USE_MECH_LIMITS</cDefine>
+            <valInt>0</valInt>
+        </si_use_mech_limits>
         <si_gear_ratio>
             <longName>Gear Ratio</longName>
             <type>1</type>
@@ -2950,6 +2962,73 @@ p, li { white-space: pre-wrap; }
             <suffix> Ah</suffix>
             <vTx>9</vTx>
         </si_battery_ah>
+        <si_mech_offset>
+            <longName>Mechanical Limits Offset</longName>
+            <type>1</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+                &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+                p, li { white-space: pre-wrap; }
+                &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'DejaVu Sans'; ; font-weight:400; font-style:normal;&quot;&gt;
+                &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Offset for mechanical limits, is overridden by homing command&lt;/p&gt;
+                &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>MCCONF_SI_MECH_OFFSET</cDefine>
+            <editorDecimalsDouble>3</editorDecimalsDouble>
+            <editorScale>1</editorScale>
+            <editAsPercentage>0</editAsPercentage>
+            <maxDouble>365</maxDouble>
+            <minDouble>-365</minDouble>
+            <showDisplay>0</showDisplay>
+            <stepDouble>0.1</stepDouble>
+            <valDouble>0</valDouble>
+            <vTxDoubleScale>1</vTxDoubleScale>
+            <suffix> deg</suffix>
+            <vTx>9</vTx>
+        </si_mech_offset>
+        <si_mech_pose_limit_max>
+            <longName>Mechanical Limits Max</longName>
+            <type>1</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+                &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+                p, li { white-space: pre-wrap; }
+                &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'DejaVu Sans'; ; font-weight:400; font-style:normal;&quot;&gt;
+                &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Maximum mechanical limit, motor throws error when commanded to go beyond this. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>MCCONF_SI_MECH_POSE_LIMIT_MAX</cDefine>
+            <editorDecimalsDouble>3</editorDecimalsDouble>
+            <editorScale>1</editorScale>
+            <editAsPercentage>0</editAsPercentage>
+            <maxDouble>1e+08</maxDouble>
+            <minDouble>0</minDouble>
+            <showDisplay>0</showDisplay>
+            <stepDouble>0.1</stepDouble>
+            <valDouble>120</valDouble>
+            <vTxDoubleScale>1</vTxDoubleScale>
+            <suffix> deg</suffix>
+            <vTx>9</vTx>
+        </si_mech_pose_limit_max>
+        <si_mech_pose_limit_min>
+            <longName>Mechanical Limits Min</longName>
+            <type>1</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+                &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+                p, li { white-space: pre-wrap; }
+                &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'DejaVu Sans'; ; font-weight:400; font-style:normal;&quot;&gt;
+                &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Minium mechanical limit, motor throws error when commanded to go beyond this. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>MCCONF_SI_MECH_POSE_LIMIT_MIN</cDefine>
+            <editorDecimalsDouble>3</editorDecimalsDouble>
+            <editorScale>1</editorScale>
+            <editAsPercentage>0</editAsPercentage>
+            <maxDouble>0</maxDouble>
+            <minDouble>-1e+08</minDouble>
+            <showDisplay>0</showDisplay>
+            <stepDouble>0.1</stepDouble>
+            <valDouble>-120</valDouble>
+            <vTxDoubleScale>1</vTxDoubleScale>
+            <suffix> deg</suffix>
+            <vTx>9</vTx>
+        </si_mech_pose_limit_min>
         <motor_brand>
             <longName>Motor Brand</longName>
             <type>3</type>
@@ -3279,6 +3358,10 @@ p, li { white-space: pre-wrap; }
         <ser>si_battery_type</ser>
         <ser>si_battery_cells</ser>
         <ser>si_battery_ah</ser>
+        <ser>si_use_mech_limits</ser>
+        <ser>si_mech_offset</ser>
+        <ser>si_mech_pose_limit_max</ser>
+        <ser>si_mech_pose_limit_min</ser>
     </SerOrder>
     <Grouping>
         <group>
@@ -3554,6 +3637,10 @@ p, li { white-space: pre-wrap; }
                     <param>si_battery_type</param>
                     <param>si_battery_cells</param>
                     <param>si_battery_ah</param>
+                    <param>si_use_mech_limits</param>
+                    <param>si_mech_offset</param>
+                    <param>si_mech_pose_limit_max</param>
+                    <param>si_mech_pose_limit_min</param>
                 </subgroupParams>
             </subgroup>
             <subgroup>

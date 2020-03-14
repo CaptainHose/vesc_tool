@@ -227,6 +227,18 @@ p, li { white-space: pre-wrap; }
             <suffix></suffix>
             <vTx>1</vTx>
         </uavcan_esc_index>
+        <uavcan_fault_on_panic>
+            <longName>VESC faults on UAVCAN panic</longName>
+            <type>5</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+                &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+                p, li { white-space: pre-wrap; }
+                &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-weight:400; font-style:normal;&quot;&gt;
+                &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;If enabled, the the VESC will go in fault mode if it receives a UAVCAN panic message on the can bus. Only active when UAVCAN is used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>APPCONF_UAVCAN_FAULT_ON_PANIC</cDefine>
+            <valInt>0</valInt>
+        </uavcan_fault_on_panic>
         <app_to_use>
             <longName>APP to Use</longName>
             <type>4</type>
@@ -2729,6 +2741,7 @@ p, li { white-space: pre-wrap; }
         <ser>shutdown_mode</ser>
         <ser>can_mode</ser>
         <ser>uavcan_esc_index</ser>
+        <ser>uavcan_fault_on_panic</ser>
         <ser>app_to_use</ser>
         <ser>app_ppm_conf.ctrl_type</ser>
         <ser>app_ppm_conf.pid_max_erpm</ser>
@@ -2863,6 +2876,7 @@ p, li { white-space: pre-wrap; }
                     <param>shutdown_mode</param>
                     <param>can_mode</param>
                     <param>uavcan_esc_index</param>
+                    <param>uavcan_fault_on_panic</param>
                 </subgroupParams>
             </subgroup>
         </group>
